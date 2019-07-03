@@ -15,7 +15,9 @@ int main()
 
 			while(N / 3){
 				aux = N / 3;
-				N %
+				N %= 3;
+
+				
 			}
 
 		}
