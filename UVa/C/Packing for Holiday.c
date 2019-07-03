@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*Accepted*/
+/*Accepted. I do not know what do this code*/
 int main(){
 
 	int casos, i, a, b, c;
