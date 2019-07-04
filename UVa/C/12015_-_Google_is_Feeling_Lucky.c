@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*Aceptado y sin hacer tantas chingaderas*/
+/*Aceptado*/
 
 void busca(int *, int *, int *);
 void imprimir(int *, int *, char [10][100]);
