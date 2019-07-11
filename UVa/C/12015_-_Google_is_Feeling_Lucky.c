@@ -25,10 +25,8 @@ int main(){
 		busca(prtC1, ptrC2, ptrJ);
 		imprimir(ptrC2, ptrJ, vec);
 	}
-	
 	return 0;
 }
-
 
 void busca(int *a, int *b, int *c){
 
@@ -45,9 +43,7 @@ void busca(int *a, int *b, int *c){
 			j++;
 		}
 	}
-
 	(*c) = j;
-
 }
 
 void imprimir(int *a, int *tam, char vec[10][100]){
