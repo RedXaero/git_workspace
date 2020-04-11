@@ -24,4 +24,13 @@ void separa(char *cad, int i, int j){
     int cont;
     char aux;
     aux = cad[i];
+
+    switch(aux){
+        case('a' || 'A'):{
+
+        }
+            break;
+        default:
+            break;
+    }
 }
