@@ -13,7 +13,7 @@ int main(){
     i = j = 0;
     while(fgets(cad, 2000, stdin) != NULL)
     {
-        while( (cad[j] =! ' ') && (cad[j] != '\0'))
+        while( (cad[j] != ' ') && (cad[j] != '\0'))
             ++j;
         separa(cad, i,j);
     }
@@ -23,8 +23,5 @@ int main(){
 void separa(char *cad, int i, int j){
     int cont;
     char aux;
-    aux = &cad[i];
-
-
-
+    aux = cad[i];
 }
