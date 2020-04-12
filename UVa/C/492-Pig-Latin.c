@@ -1,36 +1,81 @@
-//
-// Created by eli on 10/04/20.
-//
-
 #include <stdio.h>
-void separa(char [], int, int);
-
 int main(){
-
     int i,j;
-    char cad[2000];
-
-    i = j = 0;
-    while(fgets(cad, 2000, stdin) != NULL)
-    {
-        while( (cad[j] != ' ') && (cad[j] != '\0'))
-            ++j;
-        separa(cad, i,j);
+    char cad[2000], aux;
+    i = 0;
+    while(fgets(cad, 2000, stdin)){
+        while(cad[i] != '\0' && cad[i] != '\n'){
+            if((cad[i] >= 'a' && cad[i] <= 'z') || (cad[i] >= 'A' && cad[i] <= 'Z')){
+                if(cad[i] == 'a' || cad[i] == 'e' || cad[i] == 'i' || cad[i] == 'o' || cad[i] == 'u'){
+                    while((cad[i] >= 'a' && cad[i] <= 'z') || (cad[i] >= 'A' && cad[i] <= 'Z')){
+                        printf("%c", cad[i]);
+                        i++;
+                    }
+                    --i;
+                    printf("ay");
+                }
+                else if(cad[i] == 'A' || cad[i] == 'E' || cad[i] == 'I' || cad[i] == 'O' || cad[i] == 'U'){
+                    while((cad[i] >= 'a' && cad[i] <= 'z') || (cad[i] >= 'A' && cad[i] <= 'Z')){
+                        printf("%c", cad[i]);
+                        i++;
+                    }
+                    --i;
+                    printf("ay");
+                }
+                else if((cad[i] >= 'a' && cad[i] <= 'z') || (cad[i] >= 'A' && cad[i] <= 'Z')){
+                    aux = cad[i];
+                    i++;
+                    while((cad[i] >= 'a' && cad[i] <= 'z') || (cad[i] >= 'A' && cad[i] <= 'Z')){
+                        printf("%c",cad[i]);
+                        i++;
+                    }
+                    --i;
+                    printf("%cay", aux);
+                }
+            }
+            else{
+                printf("%c",cad[i]);
+            }
+            ++i;
+        }
+        if(cad[i] == '\n')
+            printf("\n");
+        i = 0;
     }
     return 0;
 }
 
-void separa(char *cad, int i, int j){
-    int cont;
-    char aux;
-    aux = cad[i];
-
-    switch(aux){
-        case('a' || 'A'):{
-
+/*
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+    char ch,save;
+    int n;
+    while(scanf("%c",&ch)==1)
+    {
+        if((ch=='a'|| ch=='A'||ch=='e'|| ch=='E'||ch=='i'|| ch=='I'||ch=='u'|| ch=='U'||ch=='o'|| ch=='O'))
+        {
+            printf("%c",ch);
+            while(scanf("%c",&ch)==1){
+                if(isalpha(ch)==0)
+                    break;
+                printf("%c",ch);
+            }            printf("ay%c",ch);
         }
-            break;
-        default:
-            break;
+        else if(isalpha(ch))
+        {
+            save=ch;
+            while(scanf("%c",&ch))
+            {
+                if(isalpha(ch)==0)
+                    break;
+                printf("%c",ch);
+            }
+            printf("%cay%c",save,ch);
+        }
+        else
+            printf("%c",ch);
     }
-}
+    return 0;
+}*/
